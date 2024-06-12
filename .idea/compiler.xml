@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="04-calculoMassaCorporal" />
         <module name="exercicio03" />
+        <module name="exercicio02" />
         <module name="exercicio01" />
         <module name="exercio02" />
         <module name="03-sistemasCompras" />
