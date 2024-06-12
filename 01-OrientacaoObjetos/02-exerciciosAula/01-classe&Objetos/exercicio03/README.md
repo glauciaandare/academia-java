@@ -14,4 +14,4 @@ O local da aula é: Sala 2
 
 Exemplo:
 
-![img_1.png](img_1.png)![img.png](img.png)
+![img.png](img.png)
