@@ -13,6 +13,7 @@
         <module name="03-sistemasCompras" />
         <module name="05-calculoImpostoRenda" />
         <module name="02-sistemaEscolar" />
+        <module name="exerecicio04" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
