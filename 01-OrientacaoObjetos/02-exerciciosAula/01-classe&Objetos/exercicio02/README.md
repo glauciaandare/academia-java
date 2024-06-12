@@ -11,3 +11,7 @@ Por exemplo: o resultado da execução da classe Disciplina deve ser algo simila
 O nome do professor é: Lucas Schlestein,
 
 O local da aula é: Sala 2
+
+Exemplo:
+
+![img.png](img.png)
