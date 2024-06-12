@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="04-calculoMassaCorporal" />
-        <module name="05-calculoImpostoRenda" />
-        <module name="02-sistemaEscolar" />
+        <module name="exercicio03" />
         <module name="exercicio01" />
         <module name="exercio02" />
         <module name="03-sistemasCompras" />
+        <module name="05-calculoImpostoRenda" />
+        <module name="02-sistemaEscolar" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
