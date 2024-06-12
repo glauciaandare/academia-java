@@ -1,16 +1,15 @@
-Crie uma classe chamada Professor que contenha um atributo público chamado nome, do tipo
-String. Crie também uma classe chamada Laboratorio, que contenha um atributo público,
-chamado local, do tipo String.
+Crie um método para atribuir valores para fabricante e modelo do carro, sendo que esses
+valores são recebidos pelo método através de parâmetros.
 
-Além disso, crie uma classe executável chamada Disciplina, responsável por instanciar as classes
-Professor e Laboratorio, definindo valor aos atributos e exibindo na tela o resultado da criação
-desses objetos.
+Após, implemente a classe
+LocadoraVeiculos para instanciar a classe Carro, chamar o método correspondente e passar os
+parâmetros necessários.
 
-Por exemplo: o resultado da execução da classe Disciplina deve ser algo similar com:
+Além de um método para atribuir os valores, crie um método que
+retorna os valores atribuídos.
 
-O nome do professor é: Lucas Schlestein,
-
-O local da aula é: Sala 2
+O resultado da execução da classe LocadoraVeiculos deve ser:
+Dados do carro: VW Gol
 
 Exemplo:
 
