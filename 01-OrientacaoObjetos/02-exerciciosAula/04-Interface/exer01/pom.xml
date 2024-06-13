@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>academia.java</groupId>
-    <artifactId>exercicio-01</artifactId>
+    <artifactId>exer01</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
