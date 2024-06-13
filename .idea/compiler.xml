@@ -17,6 +17,7 @@
         <module name="02-sistemaEscolar" />
         <module name="exerecicio04" />
         <module name="exercicio1" />
+        <module name="exercicio2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
