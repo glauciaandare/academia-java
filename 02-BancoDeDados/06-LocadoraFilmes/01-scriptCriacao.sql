@@ -1,116 +1,112 @@
---script criação do banco de dados
-create database locadorafilmes;
+CREATE
+DATABASE locadora
 
---Script de Criação
--- Tabela ENDERECO
-CREATE TABLE ENDERECO (
-    COD_END SERIAL PRIMARY KEY,
-    LOGRADOURO VARCHAR(40),
-    TIPO_LOG VARCHAR(40),
-    COMPLEMENTO VARCHAR(20),
-    CIDADE VARCHAR(60),
-    UF CHAR(1),
-    CEP CHAR(8),
-    NUMERO VARCHAR(10),
-    BAIRRO VARCHAR(60)
+CREATE TABLE endereco
+(
+    cod_end     serial primary key,
+    logradouro  VARCHAR(40),
+    tipo_log    VARCHAR(40),
+    complemento VARCHAR(20),
+    cidade      VARCHAR(60),
+    uf          CHAR(2),
+    cep         CHAR(8),
+    numero      VARCHAR(10),
+    bairro      VARCHAR(60)
 );
 
--- Tabela PROFISSAO
-CREATE TABLE PROFISSAO (
-    COD_PROF SERIAL PRIMARY KEY,
-    NOME VARCHAR(60)
+CREATE TABLE profissao
+(
+    cod_prof serial primary key,
+    nome     VARCHAR(60)
 );
 
--- Tabela CLIENTE
-CREATE TABLE CLIENTE (
-    COD_CLI SERIAL PRIMARY KEY,
-    CPF CHAR(11) NOT NULL,
-    NOME VARCHAR(60),
-    TELEFONE VARCHAR(15),
-    COD_PROF INT,
-    FOREIGN KEY (COD_PROF) REFERENCES PROFISSAO(COD_PROF)
+CREATE TABLE categoria
+(
+    cod_cat serial primary key,
+    nome    VARCHAR(60),
+    valor   NUMERIC(15, 2)
 );
 
--- Tabela DEPENDENTE
-CREATE TABLE DEPENDENTE (
-    COD_CLI INT NOT NULL,
-    COD_DEP SERIAL PRIMARY KEY,
-    PARENTESCO VARCHAR(20),
-    FOREIGN KEY (COD_CLI) REFERENCES CLIENTE(COD_CLI)
+CREATE TABLE genero
+(
+    cod_gen serial primary key,
+    nome    VARCHAR(60)
 );
 
--- Tabela CATEGORIA
-CREATE TABLE CATEGORIA (
-    COD_CAT SERIAL PRIMARY KEY,
-    NOME VARCHAR(60),
-    VALOR NUMERIC(15,2)
+CREATE TABLE ator
+(
+    cod_ator serial primary key,
+    nome     VARCHAR(60)
 );
 
--- Tabela GENERO
-CREATE TABLE GENERO (
-    COD_GEN SERIAL PRIMARY KEY,
-    NOME VARCHAR(60)
+CREATE TABLE filmes
+(
+    cod_filme       serial primary key,
+    titulo_original VARCHAR(100),
+    titulo          VARCHAR(100),
+    quantidade      VARCHAR(100),
+    fk_cod_cat      INTEGER,
+    fk_cod_gen      INTEGER,
+    FOREIGN KEY (fk_cod_cat) REFERENCES categoria (cod_cat),
+    FOREIGN KEY (fk_cod_gen) REFERENCES genero (cod_gen)
 );
 
--- Tabela FILMES
-CREATE TABLE FILMES (
-    COD_FILME SERIAL PRIMARY KEY,
-    TITULO_ORIGINAL VARCHAR(100),
-    TITULO VARCHAR(100),
-    QUANTIDADE INT,
-    COD_CAT INT,
-    COD_GEN INT,
-    FOREIGN KEY (COD_CAT) REFERENCES CATEGORIA(COD_CAT),
-    FOREIGN KEY (COD_GEN) REFERENCES GENERO(COD_GEN)
+CREATE TABLE filme_ator
+(
+    fk_cod_ator  INTEGER,
+    fk_cod_filme INTEGER,
+    ator         CHAR(1),
+    diretor      CHAR(1),
+    PRIMARY KEY (fk_cod_ator, fk_cod_filme),
+    FOREIGN KEY (fk_cod_ator) REFERENCES ator (cod_ator),
+    FOREIGN KEY (fk_cod_filme) REFERENCES filmes (cod_filme)
 );
 
--- Tabela LOCACAO
-CREATE TABLE LOCACAO (
-    COD_LOC SERIAL PRIMARY KEY,
-    DATA_LOC DATE,
-    DESCONTO NUMERIC(15,2),
-    MULTA NUMERIC(15,2),
-    SUB_TOTAL NUMERIC(15,2),
-    COD_CLI INT,
-    FOREIGN KEY (COD_CLI) REFERENCES CLIENTE(COD_CLI)
+CREATE TABLE cliente
+(
+    cod_cliente serial primary key,
+    cpf         CHAR(11),
+    nome        VARCHAR(60),
+    telefone    VARCHAR(10),
+    fk_cod_prof INTEGER,
+    FOREIGN KEY (fk_cod_prof) REFERENCES profissao (cod_prof)
 );
 
--- Tabela LOCACAO_FILME
-CREATE TABLE LOCACAO_FILME (
-    COD_LOC INT NOT NULL,
-    COD_FILME INT NOT NULL,
-    QTD DIAS INT,
-    DATA_DEVOL DATE,
-    PRIMARY KEY (COD_LOC, COD_FILME),
-    FOREIGN KEY (COD_LOC) REFERENCES LOCACAO(COD_LOC),
-    FOREIGN KEY (COD_FILME) REFERENCES FILMES(COD_FILME)
+CREATE TABLE dependente
+(
+    cod_dep        serial primary key,
+    fk_cod_cliente INTEGER,
+    parentesco     VARCHAR(20),
+    FOREIGN KEY (fk_cod_cliente) REFERENCES cliente (cod_cliente)
 );
 
--- Tabela ATOR
-CREATE TABLE ATOR (
-    COD_ATOR SERIAL PRIMARY KEY,
-    NOME VARCHAR(60)
+CREATE TABLE locacao
+(
+    cod_loc        serial primary key,
+    data_loc       DATE,
+    desconto       MONEY,
+    multa          MONEY,
+    sub_total      MONEY,
+    fk_cod_cliente INTEGER,
+    FOREIGN KEY (fk_cod_cliente) REFERENCES cliente (cod_cliente)
 );
 
--- Tabela FILME_ATOR
-CREATE TABLE FILME_ATOR (
-    COD_ATOR INT NOT NULL,
-    COD_FILME INT NOT NULL,
-    ATOR CHAR(1),
-    DIRETOR CHAR(1),
-    PRIMARY KEY (COD_ATOR, COD_FILME),
-    FOREIGN KEY (COD_ATOR) REFERENCES ATOR(COD_ATOR),
-    FOREIGN KEY (COD_FILME) REFERENCES FILMES(COD_FILME)
+CREATE TABLE locacao_filme
+(
+    fk_cod_loc   INTEGER,
+    fk_cod_filme INTEGER,
+    valor        MONEY,
+    num_dias     INT,
+    data_devol   DATE,
+    FOREIGN KEY (fk_cod_loc) REFERENCES locacao (cod_loc),
+    FOREIGN KEY (fk_cod_filme) REFERENCES filmes (cod_filme)
 );
 
--- Tabela CLI_ENDERECO
-CREATE TABLE CLI_ENDERECO (
-    COD_END INT NOT NULL,
-    COD_CLI INT NOT NULL,
-    PRIMARY KEY (COD_END, COD_CLI),
-    FOREIGN KEY (COD_END) REFERENCES ENDERECO(COD_END),
-    FOREIGN KEY (COD_CLI) REFERENCES CLIENTE(COD_CLI)
+CREATE TABLE cli_endereco
+(
+    fk_cod_end     INTEGER,
+    fk_cod_cliente INTEGER,
+    PRIMARY KEY (fk_cod_end, fk_cod_cliente),
+    FOREIGN KEY (fk_cod_end) REFERENCES endereco (cod_end),
+    FOREIGN KEY (fk_cod_cliente) REFERENCES cliente (cod_cliente)
 );
-
-
-
