@@ -1,125 +1,213 @@
--- Inserindo dados na tabela PROFISSAO
-INSERT INTO PROFISSAO (NOME) VALUES ('Engenheiro'), ('Médico'), ('Advogado'), ('Professor'), ('Arquiteto');
+INSERT INTO genero (nome)
+VALUES
+    ('Romance', ),
+    ('Animação'),
+    ('Comédia'),
+    ('Aventura'),
+    ('Crime'),
+    ('Ficção Científica'),
+    ('Fantasia'),
+    ('Ação'),
+    ('Drama'),
+    ('Suspense');
 
--- Inserindo dados na tabela CLIENTE
-INSERT INTO CLIENTE (CPF, NOME, TELEFONE, COD_PROF) VALUES 
-('12345678901', 'João Silva', '111111111', 1),
-('23456789012', 'Maria Oliveira', '222222222', 2),
-('34567890123', 'Carlos Pereira', '333333333', 3),
-('45678901234', 'Ana Costa', '444444444', 4),
-('56789012345', 'Pedro Almeida', '555555555', 5),
-('67890123456', 'Lucas Santos', '666666666', 1),
-('78901234567', 'Juliana Ramos', '777777777', 2),
-('89012345678', 'Roberto Lima', '888888888', 3),
-('90123456789', 'Fernanda Souza', '999999999', 4),
-('01234567890', 'Bruno Oliveira', '101010101', 5);
+SELECT * FROM genero
 
--- Inserindo dados na tabela ENDERECO
-INSERT INTO ENDERECO (LOGRADOURO, TIPO_LOG, COMPLEMENTO, CIDADE, UF, CEP, NUMERO, BAIRRO) VALUES 
-('Rua A', 'Rua', 'Apt 101', 'Cidade A', 'S', '12345678', '10', 'Centro'),
-('Rua B', 'Avenida', 'Casa', 'Cidade B', 'S', '23456789', '20', 'Bairro B'),
-('Rua C', 'Travessa', 'Bloco 3', 'Cidade C', 'S', '34567890', '30', 'Bairro C'),
-('Rua D', 'Rua', 'Apt 202', 'Cidade D', 'S', '45678901', '40', 'Centro'),
-('Rua E', 'Avenida', 'Casa', 'Cidade E', 'S', '56789012', '50', 'Bairro E'),
-('Rua F', 'Travessa', 'Bloco 4', 'Cidade F', 'S', '67890123', '60', 'Bairro F'),
-('Rua G', 'Rua', 'Apt 303', 'Cidade G', 'S', '78901234', '70', 'Centro'),
-('Rua H', 'Avenida', 'Casa', 'Cidade H', 'S', '89012345', '80', 'Bairro H'),
-('Rua I', 'Travessa', 'Bloco 5', 'Cidade I', 'S', '90123456', '90', 'Bairro I'),
-('Rua J', 'Rua', 'Apt 404', 'Cidade J', 'S', '01234567', '100', 'Centro');
+    INSERT INTO ator (nome)
+VALUES
+    ('Leonardo DiCaprio'),
+    ('Kate Winslet'),
+    ('Billy Zane'),
+    ('Cate Blanchett'),
+    ('Richard Madden'),
+    ('Helena Bonham Carter'),
+    ('Mike Myers'),
+    ('Eddie Murphy'),
+    ('Cameron Diaz'),
+    ('Tom Hanks'),
+    ('Keanu Reeves'),
+    ('Carrie-Anne Moss'),
+    ('Daniel Radcliffe'),
+    ('Emma Watson'),
+    ('Rupert Grint');
 
--- Inserindo dados na tabela CLI_ENDERECO
-INSERT INTO CLI_ENDERECO (COD_END, COD_CLI) VALUES 
-(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10);
+SELECT * FROM ator
 
--- Inserindo dados na tabela DEPENDENTE
-INSERT INTO DEPENDENTE (COD_CLI, PARENTESCO) VALUES 
-(1, 'Filho'), (2, 'Esposa'), (3, 'Filha'), (4, 'Filho'), (5, 'Esposa'),
-(6, 'Filha'), (7, 'Filho'), (8, 'Esposa'), (9, 'Filha'), (10, 'Filho');
+    INSERT INTO categoria (nome, valor)
+VALUES
+    ('Romance', 10.00),
+    ('Animação', 22.70),
+    ('Comédia', 8.00),
+    ('Aventura', 13.00),
+    ('Crime', 8.60),
+    ('Ficção Científica', 34.10),
+    ('Fantasia', 10.00),
+    ('Ação', 19.00),
+    ('Drama', 33.00),
+    ('Suspense', 12.00);
 
--- Inserindo dados na tabela CATEGORIA
-INSERT INTO CATEGORIA (NOME, VALOR) VALUES 
-('Ação', 15.00), ('Comédia', 12.00), ('Drama', 10.00), ('Terror', 8.00), ('Ficção Científica', 18.00);
+SELECT * FROM categoria
 
--- Inserindo dados na tabela GENERO
-INSERT INTO GENERO (NOME) VALUES 
-('Ficção'), ('Romance'), ('Suspense'), ('Aventura'), ('Documentário');
+    INSERT INTO filmes (titulo_original, titulo, quantidade, fk_cod_cat, fk_cod_gen)
+VALUES
+    ('Titanic', 'Titanic', '10', 1, 8),
+    ('Cinderela', 'Cinderela', '8', 1, 7),
+    ('Shrek', 'Shrek', '12', 1, 2),
+    ('A Fantástica Fábrica de Chocolate', 'A Fantástica Fábrica de Chocolate', '5', 4, 8),
+    ('Pulp Fiction', 'Pulp Fiction', '7', 5, 10),
+    ('Matrix', 'Matrix', '9', 6, 9),
+    ('Harry Potter e a Pedra Filosofal', 'Harry Potter e a Pedra Filosofal', '11', 7, 8),
+    ('O Senhor dos Anéis: A Sociedade do Anel', 'O Senhor dos Anéis: A Sociedade do Anel', '6', 8, 4),
+    ('Forrest Gump', 'Forrest Gump', '8', 9, 8),
+    ('Interestelar', 'Interestelar', '10', 10, 6),
+    ('Toy Story', 'Toy Story', '6', 1, 2),
+    ('Jurassic Park', 'Jurassic Park', '7', 1, 4),
+    ('O Rei Leão', 'O Rei Leão', '9', 1, 1),
+    ('Os Vingadores', 'Os Vingadores', '12', 1, 9),
+    ('De Volta para o Futuro', 'De Volta para o Futuro', '8', 1, 6);
 
--- Inserindo dados na tabela FILMES
-INSERT INTO FILMES (TITULO_ORIGINAL, TITULO, QUANTIDADE, COD_CAT, COD_GEN) VALUES 
-('Inception', 'A Origem', 10, 1, 1),
-('Titanic', 'Titanic', 5, 2, 2),
-('The Shining', 'O Iluminado', 7, 3, 3),
-('Interstellar', 'Interestelar', 8, 1, 1),
-('The Dark Knight', 'O Cavaleiro das Trevas', 9, 1, 3),
-('Forrest Gump', 'Forrest Gump', 6, 2, 2),
-('The Matrix', 'Matrix', 7, 5, 1),
-('The Godfather', 'O Poderoso Chefão', 5, 3, 3),
-('Jurassic Park', 'Parque dos Dinossauros', 10, 1, 4),
-('Pulp Fiction', 'Pulp Fiction', 8, 3, 3),
-('Back to the Future', 'De Volta para o Futuro', 7, 5, 4),
-('Schindler\'s List', 'A Lista de Schindler', 6, 3, 5),
-('Gladiator', 'Gladiador', 9, 1, 4),
-('Saving Private Ryan', 'O Resgate do Soldado Ryan', 7, 1, 5),
-('The Silence of the Lambs', 'O Silêncio dos Inocentes', 6, 4, 3);
+SELECT * FROM filmes
 
--- Inserindo dados na tabela LOCACAO
-INSERT INTO LOCACAO (DATA_LOC, DESCONTO, MULTA, SUB_TOTAL, COD_CLI) VALUES 
-('2024-06-01', 5.00, 0.00, 50.00, 1),
-('2024-06-02', 0.00, 10.00, 30.00, 2),
-('2024-06-03', 3.00, 0.00, 40.00, 3),
-('2024-06-04', 0.00, 5.00, 35.00, 4),
-('2024-06-05', 2.00, 0.00, 25.00, 5),
-('2024-06-06', 1.00, 0.00, 20.00, 6),
-('2024-06-07', 0.00, 0.00, 15.00, 7),
-('2024-06-08', 0.00, 0.00, 10.00, 8),
-('2024-06-09', 0.00, 0.00, 5.00, 9),
-('2024-06-10', 0.00, 0.00, 50.00, 10),
-('2024-06-11', 5.00, 0.00, 50.00, 1),
-('2024-06-12', 0.00, 10.00, 30.00, 2),
-('2024-06-13', 3.00, 0.00, 40.00, 3),
-('2024-06-14', 0.00, 5.00, 35.00, 4),
-('2024-06-15', 2.00, 0.00, 25.00, 5),
-('2024-06-16', 1.00, 0.00, 20.00, 6),
-('2024-06-17', 0.00, 0.00, 15.00, 7),
-('2024-06-18', 0.00, 0.00, 10.00, 8),
-('2024-06-19', 0.00, 0.00, 5.00, 9),
-('2024-06-20', 0.00, 0.00, 50.00, 10);
+    INSERT INTO profissao (nome)
+VALUES
+    ('Engenheiro'),
+    ('Advogado'),
+    ('Professor'),
+    ('Médico');
 
--- Inserindo dados na tabela LOCACAO_FILME
-INSERT INTO LOCACAO_FILME (COD_LOC, COD_FILME, QTD, DATA_DEVOL) VALUES 
-(1, 1, 3, '2024-06-05'),
-(2, 2, 5, '2024-06-07'),
-(3, 3, 7, '2024-06-10'),
-(4, 4, 2, '2024-06-12'),
-(5, 5, 4, '2024-06-15'),
-(6, 6, 1, '2024-06-18'),
-(7, 7, 5, '2024-06-20'),
-(8, 8, 3, '2024-06-23'),
-(9, 9, 6, '2024-06-25'),
-(10, 10, 7, '2024-06-28'),
-(11, 11, 3, '2024-07-01'),
-(12, 12, 5, '2024-07-03'),
-(13, 13, 7, '2024-07-06'),
-(14, 14, 2, '2024-07-08'),
-(15, 15, 4, '2024-07-10'),
-(16, 1, 1, '2024-07-12'),
-(17, 2, 5, '2024-07-14'),
-(18, 3, 3, '2024-07-16'),
-(19, 4, 6, '2024-07-18'),
-(20, 5, 7, '2024-07-20');
+SELECT * FROM profissao
 
--- Inserindo dados na tabela ATOR
-INSERT INTO ATOR (NOME) VALUES 
-('Leonardo DiCaprio'), ('Kate Winslet'), ('Jack Nicholson'), 
-('Matthew McConaughey'), ('Christian Bale'), ('Tom Hanks'), 
-('Keanu Reeves'), ('Marlon Brando'), ('Sam Neill'), 
-('John Travolta'), ('Michael J. Fox'), ('Liam Neeson'), 
-('Russell Crowe'), ('Tom Hanks'), ('Anthony Hopkins');
+    INSERT INTO cliente (cpf, nome, telefone, fk_cod_prof)
+VALUES
+    ('98765432100', 'Maria Souza', '1197654321', 2),
+    ('12345678900', 'João da Silva', '1198765432', 1),
+    ('56789012300', 'Pedro Santos', '1196543217', 3),
+    ('34567890100', 'Ana Oliveira', '1195432176', 1),
+    ('90123456700', 'Carlos Martins', '1194321765', 2),
+    ('23456789000', 'Juliana Costa', '1193217654', 3),
+    ('67890123400', 'Marcos Lima', '1192176543', 1),
+    ('45678901200', 'Luiza Pereira', '1191765432', 2),
+    ('89012345600', 'Fernanda Rodrigues', '1197654321', 3),
+    ('01234567800', 'Rafaela Almeida', '1196543217', 1);
 
--- Inserindo dados na tabela FILME_ATOR
-INSERT INTO FILME_ATOR (COD_ATOR, COD_FILME, ATOR, DIRETOR) VALUES 
-(1, 1, 'S', 'N'), (2, 2, 'S', 'N'), (3, 3, 'S', 'N'),
-(4, 4, 'S', 'N'), (5, 5, 'S', 'N'), (6, 6, 'S', 'N'),
-(7, 7, 'S', 'N'), (8, 8, 'S', 'N'), (9, 9, 'S', 'N'),
-(10, 10, 'S', 'N'), (11, 11, 'S', 'N'), (12, 12, 'S', 'N'),
-(13, 13, 'S', 'N'), (14, 14, 'S', 'N'), (15, 15, 'S', 'N');
+SELECT * FROM cliente
+
+    INSERT INTO locacao (data_loc, desconto, multa, sub_total, fk_cod_cliente)
+VALUES
+    ('2024-06-01', 0, 0, 50.00, 1),
+    ('2024-06-03', 5.00, 0, 45.00, 2),
+    ('2024-06-05', 0, 3.50, 55.00, 3),
+    ('2024-06-07', 0, 0, 60.00, 4),
+    ('2024-06-10', 0, 0, 40.00, 5),
+    ('2024-06-12', 2.00, 0, 48.00, 6),
+    ('2024-06-14', 0, 0, 70.00, 7),
+    ('2024-06-17', 0, 0, 35.00, 8),
+    ('2024-06-19', 0, 0, 42.00, 9),
+    ('2024-06-21', 0, 0, 65.00, 1),
+    ('2024-06-24', 0, 0, 38.00, 2),
+    ('2024-06-26', 1.50, 0, 47.00, 3),
+    ('2024-06-28', 0, 0, 58.00, 4),
+    ('2024-07-01', 0, 4.00, 52.00, 5),
+    ('2024-07-03', 0, 0, 44.00, 6),
+    ('2024-07-05', 3.00, 0, 57.00, 7),
+    ('2024-07-08', 0, 0, 62.00, 8),
+    ('2024-07-10', 0, 0, 36.00, 9),
+    ('2024-07-12', 0, 0, 49.00, 1),
+    ('2024-07-14', 0, 0, 68.00, 2);
+
+SELECT * FROM locacao
+
+    INSERT INTO dependente (cod_dep, fk_cod_cliente, parentesco)
+VALUES
+    (1, 1, 'Filho'),
+    (2, 1, 'Filha'),
+    (3, 3, 'Esposa'),
+    (4, 5, 'Filho'),
+    (5, 6, 'Filha'),
+    (6, 7, 'Esposo'),
+    (7, 8, 'Filho'),
+    (8, 9, 'Filho'),
+    (9, 10, 'Esposa'),
+    (10, 10, 'Filho');
+
+SELECT * FROM dependente
+
+    INSERT INTO locacao_filme (fk_cod_loc, fk_cod_filme, valor, num_dias, data_devol)
+VALUES
+    (21, 76, 10.00, 3, '2024-06-04'),
+    (22, 77, 8.00, 2, '2024-06-03'),
+    (23, 78, 12.00, 4, '2024-06-07'),
+    (24, 79, 5.00, 1, '2024-06-04'),
+    (25, 80, 7.00, 3, '2024-06-08'),
+    (26, 81, 9.00, 2, '2024-06-06'),
+    (27, 82, 11.00, 5, '2024-06-12'),
+    (28, 83, 6.00, 2, '2024-06-09'),
+    (29, 84, 8.00, 3, '2024-06-13'),
+    (30, 85, 10.00, 1, '2024-06-11'),
+    (31, 86, 6.00, 2, '2024-06-14'),
+    (32, 87, 7.00, 4, '2024-06-18'),
+    (33, 88, 9.00, 3, '2024-06-17'),
+    (34, 89, 12.00, 5, '2024-06-22'),
+    (35, 90, 5.00, 2, '2024-06-19'),
+    (36, 76, 8.00, 3, '2024-06-23'),
+    (37, 77, 7.00, 4, '2024-06-26'),
+    (38, 78, 10.00, 2, '2024-06-25'),
+    (39, 79, 6.00, 3, '2024-06-28'),
+    (40, 80, 9.00, 1, '2024-06-27'),
+    (22, 81, 12.00, 4, '2024-07-01'),
+    (23, 82, 5.00, 2, '2024-06-29'),
+    (25, 83, 7.00, 3, '2024-07-03'),
+    (32, 84, 8.00, 2, '2024-07-02'),
+    (23, 85, 10.00, 4, '2024-07-06'),
+    (23, 86, 6.00, 1, '2024-07-04'),
+    (34, 87, 9.00, 4, '2024-07-01'),
+    (35, 88, 10.00, 2, '2024-07-10'),
+    (24, 89, 12.00, 3, '2024-07-15'),
+    (25, 90, 5.00, 1, '2024-07-12');
+
+SELECT * FROM locacao_filme
+
+    INSERT INTO filme_ator (fk_cod_ator, fk_cod_filme, ator, diretor)
+VALUES
+    (1, 76, 'S', 'N'),
+    (2, 76, 'N', 'N'),
+    (3, 76, 'N', 'N'),
+    (4, 77, 'S', 'N'),
+    (5, 77, 'N', 'N'),
+    (6, 77, 'N', 'N'),
+    (7, 78, 'S', 'N'),
+    (8, 78, 'N', 'N'),
+    (9, 78, 'N', 'N'),
+    (10, 79, 'S', 'N'),
+    (11, 80, 'S', 'N'),
+    (12, 81, 'S', 'N'),
+    (13, 82, 'S', 'N'),
+    (14, 83, 'S', 'N'),
+    (15, 84, 'S', 'N');
+
+SELECT * FROM filme_ator
+
+    INSERT INTO endereco (cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro)
+VALUES
+    (1, 'Rua dos Bobos', 'Rua', 'Apto 101', 'São Paulo', 'SP', '01001000', '100', 'Centro'),
+    (2, 'Av. Paulista', 'Avenida', 'Sala 302', 'São Paulo', 'SP', '01310000', '500', 'Bela Vista'),
+    (3, 'Rua da Alegria', 'Rua', 'Casa 10', 'Rio de Janeiro', 'RJ', '20000000', '200', 'Copacabana'),
+    (4, 'Av. Atlântica', 'Avenida', 'Bloco A', 'Rio de Janeiro', 'RJ', '22000000', '1000', 'Ipanema'),
+    (5, 'Rua das Flores', 'Rua', 'Casa 5', 'Belo Horizonte', 'MG', '30100000', '50', 'Centro');
+
+SELECT * FROM endereco
+
+    INSERT INTO cli_endereco (fk_cod_end, fk_cod_cliente)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (1, 6),
+    (2, 7),
+    (3, 8),
+    (4, 9),
+    (5, 10);
+
+SELECT * FROM cli_endereco
