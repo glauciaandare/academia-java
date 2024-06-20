@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/03-Herança/exercicio1/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/03-Herança/exercicio2/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/03-Herança/exercicio3/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/03-Herança/exercicio4/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/04-Interface/exer01/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/04-Interface/exer02/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/02-Construtores/exercicio01/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/02-Construtores/exercicio02/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/05-Poliformismo/exer1/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/01-classe&amp;Objetos/exercicio01/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/01-classe&amp;Objetos/exercicio02/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/01-classe&amp;Objetos/exercicio03/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/01-classe&amp;Objetos/exercicio04/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/01-listaExercicios/02-sistemaEscolar/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/01-listaExercicios/03-sistemasCompras/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/01-listaExercicios/01-sistemaBiblioteca/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/01-listaExercicios/05-calculoImpostoRenda/pom.xml" />
+        <option value="$PROJECT_DIR$/01-OrientacaoObjetos/01-listaExercicios/04-calculoMassaCorporal/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="exercicio3" />
+        <module name="exercicio4" />
+        <module name="exercicio03" />
+        <module name="04-calculoMassaCorporal" />
+        <module name="exercicio02" />
+        <module name="exercicio01" />
+        <module name="exercio02" />
+        <module name="exer01" />
+        <module name="exer02" />
+        <module name="05-calculoImpostoRenda" />
+        <module name="exerecicio04" />
+        <module name="exer1" />
+        <module name="03-sistemasCompras" />
+        <module name="exercicios01" />
+        <module name="02-sistemaEscolar" />
+        <module name="exercicio1" />
+        <module name="exercicio2" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

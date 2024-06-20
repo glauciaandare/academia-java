@@ -6,28 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="exercicio3" />
-        <module name="04-calculoMassaCorporal" />
-        <module name="exercicio03" />
-        <module name="exercicio4" />
         <module name="exercicio02" />
-        <module name="exercicio01" />
-        <module name="exercio02" />
-        <module name="exer01" />
-        <module name="exer02" />
-        <module name="05-calculoImpostoRenda" />
-        <module name="exerecicio04" />
-        <module name="exer1" />
+        <module name="03-JDBC" />
         <module name="03-sistemasCompras" />
-        <module name="exercicios01" />
-        <module name="02-sistemaEscolar" />
-        <module name="exercicio1" />
-        <module name="exercicio2" />
+        <module name="02-Docker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-listaExercicios" target="17" />
       <module name="01-OrientacaoObjetos" target="17" />
+      <module name="02-sistemaEscolar" target="17" />
+      <module name="04-calculoMassaCorporal" target="17" />
+      <module name="05-calculoImpostoRenda" target="17" />
+      <module name="exer01" target="17" />
+      <module name="exer02" target="17" />
+      <module name="exer1" target="17" />
+      <module name="exercicio01" target="17" />
+      <module name="exercicio03" target="17" />
+      <module name="exercicio1" target="17" />
+      <module name="exercicio2" target="17" />
+      <module name="exercicio3" target="17" />
+      <module name="exercicio4" target="17" />
+      <module name="exercicios01" target="17" />
+      <module name="exercio02" target="17" />
+      <module name="exerecicio04" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

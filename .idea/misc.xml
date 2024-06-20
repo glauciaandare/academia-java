@@ -28,6 +28,14 @@
         <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/04-Interface/exer01/pom.xml" />
         <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/05-Poliformismo/exer1/pom.xml" />
         <option value="$PROJECT_DIR$/01-OrientacaoObjetos/02-exerciciosAula/04-Interface/exer02/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/01-OrientacaoObjetos/02-exerciciosAula/02-Construtores/exercicio02/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/01-OrientacaoObjetos/01-listaExercicios/03-sistemasCompras/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/01-OrientacaoObjetos/01-listaExercicios/05-calculoImpostoRenda/pom.xml" />
+        <option value="$PROJECT_DIR$/02-Docker/pom.xml" />
+        <option value="$PROJECT_DIR$/01-Backend/03-JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/01-Backend/01-OrientacaoObjetos/02-exerciciosAula/02-Construtores/exercicio02/pom.xml" />
+        <option value="$PROJECT_DIR$/01-Backend/01-OrientacaoObjetos/01-listaExercicios/03-sistemasCompras/pom.xml" />
+        <option value="$PROJECT_DIR$/01-Backend/02-Docker/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -37,6 +45,6 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/backend/out" />
+    <output url="file://$PROJECT_DIR$/01-Backend/out" />
   </component>
 </project>
