@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="exercicio02" />
-        <module name="03-JDBC" />
         <module name="03-sistemasCompras" />
         <module name="02-Docker" />
       </profile>
@@ -16,6 +15,7 @@
       <module name="01-listaExercicios" target="17" />
       <module name="01-OrientacaoObjetos" target="17" />
       <module name="02-sistemaEscolar" target="17" />
+      <module name="03-JDBC" target="17" />
       <module name="04-calculoMassaCorporal" target="17" />
       <module name="05-calculoImpostoRenda" target="17" />
       <module name="exer01" target="17" />

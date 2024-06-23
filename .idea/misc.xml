@@ -40,6 +40,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/01-Backend/03-JDBC/pom.xml" />
         <option value="$PROJECT_DIR$/01-OrientacaoObjetos/pom.xml" />
       </set>
     </option>
